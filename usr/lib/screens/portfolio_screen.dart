@@ -28,9 +28,9 @@ class PortfolioScreen extends StatelessWidget {
                 children: [
                   const Text('Account Summary', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 10),
-                  Text('Total Value: $${mockData.portfolioValue.toStringAsFixed(2)}'),
-                  Text('Cash: $${mockData.cashBalance.toStringAsFixed(2)}'),
-                  Text('Total P&L: $${mockData.totalPnL.toStringAsFixed(2)} (${mockData.totalPnLPercent.toStringAsFixed(2)}%)', style: TextStyle(color: mockData.totalPnL >= 0 ? Colors.green : Colors.red)),
+                  Text('Total Value: \$${mockData.portfolioValue.toStringAsFixed(2)}'),
+                  Text('Cash: \$${mockData.cashBalance.toStringAsFixed(2)}'),
+                  Text('Total P&L: \$${mockData.totalPnL.toStringAsFixed(2)} (${mockData.totalPnLPercent.toStringAsFixed(2)}%)', style: TextStyle(color: mockData.totalPnL >= 0 ? Colors.green : Colors.red)),
                 ],
               ),
             ),
@@ -50,12 +50,12 @@ class PortfolioScreen extends StatelessWidget {
               return Card(
                 child: ListTile(
                   title: Text(holding.stock.symbol),
-                  subtitle: Text('${holding.quantity} shares @ $${holding.averagePrice.toStringAsFixed(2)}'),
+                  subtitle: Text('${holding.quantity} shares @ \$${holding.averagePrice.toStringAsFixed(2)}'),
                   trailing: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text('Value: $${holding.currentValue.toStringAsFixed(2)}'),
+                      Text('Value: \$${holding.currentValue.toStringAsFixed(2)}'),
                       Text('${holding.pnlPercent.toStringAsFixed(2)}%', style: TextStyle(color: holding.pnlPercent >= 0 ? Colors.green : Colors.red)),
                     ],
                   ),
@@ -78,7 +78,7 @@ class PortfolioScreen extends StatelessWidget {
               return Card(
                 child: ListTile(
                   title: Text('${order.type} ${order.quantity} ${order.stock.symbol}'),
-                  subtitle: Text('${order.timestamp} @ $${order.price.toStringAsFixed(2)}'),
+                  subtitle: Text('${order.timestamp} @ \$${order.price.toStringAsFixed(2)}'),
                   trailing: Text(order.status, style: TextStyle(color: order.status == 'Filled' ? Colors.green : Colors.orange)),
                 ),
               );

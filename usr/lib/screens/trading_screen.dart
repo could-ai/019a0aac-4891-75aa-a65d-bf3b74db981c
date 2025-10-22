@@ -54,7 +54,7 @@ class _TradingScreenState extends State<TradingScreen> {
                   children: [
                     Text(_selectedStock!.name, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                     Text('Symbol: ${_selectedStock!.symbol}'),
-                    Text('Price: $${_selectedStock!.price.toStringAsFixed(2)}'),
+                    Text('Price: \$${_selectedStock!.price.toStringAsFixed(2)}'),
                     Text('Change: ${_selectedStock!.changePercent.toStringAsFixed(2)}%', style: TextStyle(color: _selectedStock!.changePercent >= 0 ? Colors.green : Colors.red)),
                   ],
                 ),

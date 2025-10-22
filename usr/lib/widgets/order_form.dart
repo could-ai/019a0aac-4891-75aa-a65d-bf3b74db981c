@@ -54,7 +54,7 @@ class _OrderFormState extends State<OrderForm> {
               ],
             ),
             const SizedBox(height: 16),
-            Text('Estimated Total: $${(int.tryParse(_quantityController.text) ?? 0) * widget.stock.price}'),
+            Text('Estimated Total: \$${(int.tryParse(_quantityController.text) ?? 0) * widget.stock.price}'),
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {

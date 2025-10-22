@@ -97,7 +97,7 @@ class MockDataService extends ChangeNotifier {
   List<PortfolioHolding> get portfolioHoldings => _portfolioHoldings;
   double get cashBalance => _cashBalance;
 
-  double get portfolioValue => _portfolioHoldings.fold(0, (sum, holding) => sum + holding.currentValue) + _cashBalance;
+  double get portfolioValue => _portfolioHoldings.fold(0.0, (sum, holding) => sum + holding.currentValue) + _cashBalance;
   double get totalPnL => _portfolioHoldings.fold(0, (sum, holding) => sum + ((holding.stock.price - holding.averagePrice) * holding.quantity));
   double get totalPnLPercent => portfolioValue > 0 ? (totalPnL / (portfolioValue - totalPnL - _cashBalance + totalPnL)) * 100 : 0;
 

@@ -1,3 +1,5 @@
+import '../models/stock.dart';
+
 class Order {
   final String id;
   final String type; // 'Buy' or 'Sell'

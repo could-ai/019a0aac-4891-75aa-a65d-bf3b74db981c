@@ -79,7 +79,7 @@ class DashboardScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text('$${stock.price.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.bold)),
+                      Text('\$${stock.price.toStringAsFixed(2)}', style: const TextStyle(fontWeight: FontWeight.bold)),
                       Text('${stock.changePercent.toStringAsFixed(2)}%', style: TextStyle(color: stock.changePercent >= 0 ? Colors.green : Colors.red)),
                     ],
                   ),
